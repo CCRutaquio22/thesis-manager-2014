@@ -49,7 +49,9 @@
           <td><font face="Maiandra GD">{{thesis.SchoolYear}}</font></td>
           <td><font face="Maiandra GD">{{thesis.Status}}</font></td>
           <td><a href="/thesis/view/{{thesis.key.id()}}"><font face= "Maiandra GD">View</font></a>
+          {% if user %}     
           <a href="/thesis/edit/{{thesis.key.id()}}"><font face= "Maiandra GD">/ Edit</font></a></td>
+           {% endif %}
         </tr>
 
         {% endfor %}

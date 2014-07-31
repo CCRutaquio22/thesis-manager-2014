@@ -15,7 +15,7 @@
   </head>
 
   <body>
-
+  	    {% if user%}
 <div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
            <div class="container">
@@ -69,8 +69,33 @@
 		<center>
 		<div><input class="btn btn-large btn-info" type="submit">
 				<a class="btn btn-large btn-warning" href="/student/new">Cancel</a></div>
-        </form></div></div>
+        </form></div>
 
+        
+   {% else%}
+	<div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+           <div class="container">
+          <a class="brand"><font face="Maiandra GD">coe2043-team-1</font></a>
+                        <form class="navbar-form pull-right">
+                                      <a class="btn btn-success" href="/"><font face="Maiandra GD">HomePage</font></a>
+
+      </div>
+    </div></div>
+    <br>
+<div class="container">
+      <div class="hero-unit">
+            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+				<h2> <font face="Maiandra GD">New Student Record.</font> </h2></div>
+		<div class="alert">
+ 			 <button type="button" class="close" data-dismiss="alert">&times;</button>
+ 			 <strong>Note!</strong> Log In to Create a New File.
+			</div>
+
+{% endif%}
+
+
+        </div>
 
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap-transition.js"></script>

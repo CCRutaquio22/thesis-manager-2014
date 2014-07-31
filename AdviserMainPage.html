@@ -18,6 +18,7 @@
   <body>
 
 
+  	{% if user%}
 <div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
            <div class="container">
@@ -25,7 +26,7 @@
               <form class="navbar-form pull-right">
               <a class="btn btn-info" href="/adviser/create"><font face="Maiandra GD">New File</font></a>
               <a class="btn btn-warning" href="/adviser/list"><font face="Maiandra GD">Adviser Directory</font></a>
-              <a class="btn btn-success" href="/module/three"><font face="Maiandra GD">HomePage</font></a>
+              <a class="btn btn-success" href="/"><font face="Maiandra GD">HomePage</font></a>
             </form>
 
       </div>
@@ -80,6 +81,33 @@
 				</div>
 			</div>
 		</div>
+		{% else%}
+<div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+           <div class="container">
+          <a class="brand"><font face="Maiandra GD">coe2043-team-1</font></a>
+              <form class="navbar-form pull-right">
+              <a class="btn btn-warning" href="/adviser/list"><font face="Maiandra GD">Adviser Directory</font></a>
+              <a class="btn btn-success" href="/"><font face="Maiandra GD">HomePage</font></a>
+            </form>
+
+      </div>
+    </div></div>
+    <br>
+    <br>
+
+		<div class="container">
+
+      <div class="hero-unit">
+            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+            <h2><font face="Maiandra GD" size="8">Adviser Management System.</font></h2><br>
+            <div class="alert">
+ 			 <button type="button" class="close" data-dismiss="alert">&times;</button>
+ 			 <strong>Note!</strong> Log In to Access full Application.
+			</div>
+        <div class="bs-docs-example">
+              </div>
+{% endif%}
     </div>
 
     <script src="../assets/js/jquery.js"></script>

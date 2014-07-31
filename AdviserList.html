@@ -52,7 +52,9 @@
           <td>{{adviser.EmailAddress}}</td>
           <td>{{adviser.PhoneNumber}}</td>
           <td><a href="/adviser/view/{{adviser.key.id()}}"><font face= "Maiandra GD">View</font></a>
+          {% if user %}
           <a href="/adviser/edit/{{adviser.key.id()}}"><font face= "Maiandra GD">/ Edit</font></a></td>
+          {% endif %}
         </tr>
         {% endfor %}
       </table>
