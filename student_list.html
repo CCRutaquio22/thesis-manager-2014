@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STUDENT LIST</title>
+</head>
+<body>
+	<h1>This is the student List</h1>
+	<form method="POST" action="/student/list">
+	<ul>{% for student in student %}
+		<li> {{student.StudentNumber}} {{student.FirstName}} {{student.LastName}} - {{student.EmailAddress}}
+    	</li>
+    	{% endfor %}
+	</ul>
+</body>
+</html>

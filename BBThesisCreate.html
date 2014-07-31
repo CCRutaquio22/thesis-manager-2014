@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+  <meta charset=”utf-8”> 
+    <title>Add New Record File</title>
+    <link href="../stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="../stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        color: black;
+        background: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+<div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+           <div class="container">
+          <a class="brand">Create New Adviser Record</a>
+          </div>
+    </div>
+    	</div>
+        
+ <div class="container">
+      <div class="hero-unit">
+            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+				<h2> <font face="Maiandra GD">Fill up the following details:</font> </h2></div><hr>
+	
+		<form method="POST" action="/adviser/create">
+
+		<div><strong><font face="Maiandra GD" size="4">Department Location:</font></strong>
+		<select	name="Department" required>
+			<option value="CE">CE</option>
+			<option value="CpE">CpE</option>
+			<option value="EcE">EcE</option>
+			<option value="EE">EE</option>
+			<option value="IE">IE</option>
+			<option value="ME">ME</option>
+			</select>
+		
+		<div><strong><font face="Maiandra GD" size="4">Title:</font></strong><br>
+			<select	name="TitleName" required>
+			<option value="Ms.">Ms.</option>
+			<option value="Mr.">Mr.</option>
+			<option value="Mrs.">Mrs.</option>
+			<option value="Dr.">Dr.</option>
+			<option value="Engr.">Engr.</option>
+			</select>
+
+		<div clas="3"><strong><font face="Maiandra GD" size="4">First Name:</font></strong>
+		<input class="input-block-level" type="text" name="FirstName" required></div>
+
+		<div class="4"><strong><font face="Maiandra GD" size="4">Last Name:</font></strong>
+		<input class="input-block-level" type="text" name="LastName" required></div>
+
+		<div class="4"><strong><font face="Maiandra GD" size="4">Email Address</font></strong>
+		<input class="input-block-level" type="email" name="EmailAddress" required></div>
+
+		<div class="4"><strong><font face="Maiandra GD" size="4">Phone Number</font></strong>
+		<input class="input-block-level" type="text" name="PhoneNumber" required></div>
+
+		<br><center>
+		<div><input class="btn btn-large btn-primary" type="submit"></div></center>
+        </form></div></div>
+
+
+ <script src="../stylesheets/jquery.js"></script>
+    <script src="../stylesheets/bootstrap-transition.js"></script>
+    <script src="../stylesheets/bootstrap-alert.js"></script>
+    <script src="../stylesheets/bootstrap-modal.js"></script>
+    <script src="../stylesheets/bootstrap-dropdown.js"></script>
+    <script src="../stylesheets/bootstrap-scrollspy.js"></script>
+    <script src="../stylesheets/bootstrap-tab.js"></script>
+    <script src="../stylesheets/bootstrap-tooltip.js"></script>
+    <script src="../stylesheets/bootstrap-popover.js"></script>
+    <script src="../stylesheets/bootstrap-button.js"></script>
+    <script src="../stylesheets/bootstrap-collapse.js"></script>
+    <script src="../stylesheets/bootstrap-carousel.js"></script>
+    <script src="../stylesheets/bootstrap-typeahead.js"></script>
+  </body>
+</html>
+{% endautoescape %}

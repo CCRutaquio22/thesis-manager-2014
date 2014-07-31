@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+  <meta charset="utf-8"> 
+    <title>Specific adviser View</title>
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        color: black;
+        background: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+
+<div id="navbarExample" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand"><font face="Maiandra GD">coe2043-team-1</font></a>
+                        <form class="navbar-form pull-right">
+              <a class="btn btn-info" href="/adviser/create"><font face="Maiandra GD">Add A new File</font></a>
+            </form>
+      </div>
+    </div></div>
+    <br>
+    <br>
+        <div class="container">
+        {% for adviser in adviser%}
+        {% if id == adviser.key.id()%}
+        <div><h1>{{adviser.LastName}}<small>, {{adviser.FirstName}} {{adviser.Department}}</small></h1></div>
+        <div><p>Contact me through: {{adviser.EmailAddress}}{{adviser.PhoneNumber}}</p></div>
+        {% endif %}
+        {% endfor %}
+        </div>
+  </body>
+</html>
+{% endautoescape %}
